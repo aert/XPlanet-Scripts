@@ -8,7 +8,7 @@
 set -e
 
 # Geometry of output image.
-GEOMETRY='1920x1200'
+GEOMETRY='1920x1080'
 
 # Xplanet options. Read `man xplanet` for an explanation of each option.
 XOPTIONS='-num_times 1 -projection rectangular -light_time -verbosity -1'
@@ -126,5 +126,5 @@ rm "$XCONFIGFILE"
 # Uncomment to output file name after completion
 #echo "$OUTPUTFILE"
 
-# Uncomment to change a Gnome 2 desktop wallpaper
-#gconftool-2 -t str -s /desktop/gnome/background/picture_filename "$OUTPUTFILE"
+# Update desktop wallpaper
+nitrogen --set-scaled "$OUTPUTFILE"
